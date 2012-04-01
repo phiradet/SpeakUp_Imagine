@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="SpeakUp.PageAddDevice"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="640" d:DesignWidth="1366" Background="Pink">
+    <Grid>
+        <Grid Name="grid_PageAddDevice" ShowGridLines="False">
+            <Button Content="Add" Height="53" HorizontalAlignment="Left" Margin="459,477,0,0" Name="buttonAddDevice" Click="buttonAddDevice_Click" VerticalAlignment="Top" Width="163" />
+        </Grid>
+            
+    </Grid>
+</UserControl>

@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="SpeakUp.PageDevice"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:s="http://schemas.microsoft.com/surface/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="640" d:DesignWidth="1366">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="buttonAddNewDevice" TargetType="{x:Type Button}">
+            <Grid Background="White">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </ControlTemplate>
+        <ControlTemplate x:Key="buttonDevice" TargetType="{x:Type Button}">
+            <Grid>
+                <Grid.Background>
+                    <ImageBrush ImageSource="Images/android_vector.jpg" />
+                </Grid.Background>
+            </Grid>
+        </ControlTemplate>
+        <ControlTemplate x:Key="TextBoxDevice" TargetType="{x:Type TextBox}">
+            <Grid>
+                <Border BorderThickness="1" CornerRadius="10" Background="#FF0EA8D0">
+                    <ContentPresenter HorizontalAlignment="Center" Content="{TemplateBinding Text}" VerticalAlignment="Center"/>
+                </Border>
+            </Grid>
+        </ControlTemplate>
+        <Storyboard x:Key="ZoomOut" Completed="Storyboard_Completed">
+            <RectAnimation Storyboard.TargetName="vb" Storyboard.TargetProperty="Viewbox" To="0,0,1350,640" Duration="0:0:0.5">
+                <RectAnimation.EasingFunction>
+                    <BackEase EasingMode="EaseInOut" Amplitude="0.3"/>
+                </RectAnimation.EasingFunction>
+            </RectAnimation>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid Name="pageDevice_grid" >
+        <Grid Name="gridReal" >
+            <Grid>
+                <Grid>
+                    <s:SurfaceScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Name="ssViewer">
+                        <StackPanel Name="deviceShowPanel" Orientation="Horizontal">
+
+                        </StackPanel>
+                    </s:SurfaceScrollViewer>
+                    <Grid Height="77" VerticalAlignment="Bottom">
+                        <Button Content="Add new device" Name="buttonAddDevice" Click="buttonAddDevice_Click"   Width="146" Margin="608,13,612,6" />
+                    </Grid>
+                </Grid>
+            </Grid>
+            
+        </Grid>
+
+        <Grid Name="gridZoom" Visibility="Hidden" Background="White">
+            <Grid>
+                <Grid.Background>
+                    <VisualBrush x:Name="vb" Viewbox="0,0,1350,640" ViewboxUnits="Absolute" />
+                </Grid.Background>
+            </Grid>
+        </Grid>
+       
+    </Grid>
+</UserControl>

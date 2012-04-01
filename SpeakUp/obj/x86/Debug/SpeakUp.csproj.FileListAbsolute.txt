@@ -1,0 +1,54 @@
+D:\Project\SpeakUp\SpeakUp\SpeakUp\bin\Debug\SpeakUp.exe
+D:\Project\SpeakUp\SpeakUp\SpeakUp\bin\Debug\SpeakUp.pdb
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\MainWindow.baml
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\MainWindow.g.cs
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\App.g.cs
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\SpeakUp_MarkupCompile.cache
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\SpeakUp.g.resources
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\SpeakUp.Properties.Resources.resources
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\SpeakUp.exe
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\SpeakUp.pdb
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\SpeakUp_MarkupCompile.lref
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\PageCall.baml
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\PageChat.baml
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\PageDevice.baml
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\PageCall.g.cs
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\PageChat.g.cs
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\PageDevice.g.cs
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\PageDeviceInfo.baml
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\PageDeviceInfo.g.cs
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\PageAddDevice.baml
+D:\Project\SpeakUp\SpeakUp\SpeakUp\obj\x86\Debug\PageAddDevice.g.cs
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\SpeakUp.exe
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\SpeakUp.pdb
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\bin\Debug\SpeakUp.exe
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\bin\Debug\SpeakUp.pdb
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\PageAddDevice.baml
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\PageDeviceInfo.baml
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\PageCall.baml
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\PageChat.baml
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\PageDevice.baml
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\MainWindow.g.cs
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\PageAddDevice.g.cs
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\PageDeviceInfo.g.cs
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\PageCall.g.cs
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\PageChat.g.cs
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\PageDevice.g.cs
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\App.g.cs
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\SpeakUp_MarkupCompile.cache
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\SpeakUp_MarkupCompile.lref
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\MainWindow.baml
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\SpeakUp.g.resources
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\SpeakUp.Properties.Resources.resources
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\Interop.SpeechLib.dll
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\SpeakUp.csproj.ResolveComReference.cache
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\PageSettings.baml
+D:\Project\SpeakUp WP7\SpeakUp-champ\SpeakUp\SpeakUp\obj\x86\Debug\PageSettings.g.cs
