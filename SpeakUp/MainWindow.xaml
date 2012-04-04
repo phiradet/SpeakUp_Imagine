@@ -56,7 +56,9 @@
         			</Button>
         			<Button x:Name="buttonChat" Cursor="Hand" Content="Chat" Margin="318,13.5,0,27.5" Click="buttonChat_Click" Template="{DynamicResource ButtonNavBar}" FontSize="26.667" RenderTransformOrigin="1.218,0.562" HorizontalAlignment="Left" Width="88" Foreground="White"/>
         			<Rectangle x:Name="rectCursor" Fill="White" HorizontalAlignment="Left" Height="10.5" Margin="86,0,0,25.5" StrokeThickness="5" VerticalAlignment="Bottom" Width="56" Stroke="White"/>
-        		</Grid>  
+                    <Label Height="59" HorizontalAlignment="Left" Margin="537,14,0,0" Name="notificationLabel" VerticalAlignment="Top" Width="411" FontSize="26" />
+                    <Button x:Name="buttonSettings" Cursor="Hand" Content="Settings" Margin="421,14,0,28" Click="buttonSettings_Click" Template="{DynamicResource ButtonNavBar}" FontSize="26.667" RenderTransformOrigin="1.218,0.562" HorizontalAlignment="Left" Width="88" Foreground="White" />
+                </Grid>  
         	</Grid>
         	<Path x:Name="Path" Data="M23,65 L636,65" Fill="Black" Height="5" Margin="23,0,59,22" Stretch="Fill" Stroke="White" VerticalAlignment="Bottom" StrokeThickness="5"/>
         	

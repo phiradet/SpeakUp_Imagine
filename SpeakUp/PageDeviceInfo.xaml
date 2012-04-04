@@ -435,10 +435,10 @@
     	</Rectangle>
     	<Grid x:Name="grid" HorizontalAlignment="Left" Height="130" Margin="205,84,0,0" VerticalAlignment="Top" Width="348">
     		<Border BorderThickness="1" CornerRadius="10,10,0,0" Background="#FF175A66" Margin="0,0,147,0" BorderBrush="#FF175A66" Height="57" VerticalAlignment="Top">
-    			<TextBlock TextWrapping="Wrap" Text="Device Name" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="#FFFFFDFD"/>
+                <TextBlock TextWrapping="Wrap" Text="Device Name" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="#FFFFFDFD" />
     		</Border>
     		<Border BorderThickness="1" Background="#FF00B4D6" CornerRadius="0,10,10,10" BorderBrush="#FF00B4D6" Margin="0,57,0,0">
-    			<TextBlock TextWrapping="Wrap" Text="Pizaro Device ..." Foreground="#FFFFFDFD" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="29.333"/>
+                <TextBlock Name="deviceNameTxt" TextWrapping="Wrap" Text="" Foreground="#FFFFFDFD" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="29.333"/>
     		</Border>
     	</Grid>
     	<Grid x:Name="grid1" HorizontalAlignment="Left" Margin="205,234,0,276" Width="348">
@@ -446,7 +446,7 @@
     			<TextBlock TextWrapping="Wrap" Text="Mac Address" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="#FFFFFDFD"/>
     		</Border>
     		<Border BorderThickness="1" Background="#FF00B4D6" CornerRadius="0,10,10,10" BorderBrush="#FF00B4D6" Margin="0,57,0,0">
-    			<TextBlock TextWrapping="Wrap" Text="XX:XX:XX:XX:XX:XX" Foreground="#FFFFFDFD" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="29.333"/>
+                <TextBlock Name="macAddrTxt" TextWrapping="Wrap" Text="XX:XX:XX:XX:XX:XX" Foreground="#FFFFFDFD" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="29.333"/>
     		</Border>
     	</Grid>
     	<Grid x:Name="grid2" HorizontalAlignment="Left" Margin="205,0,0,125" Width="348" Height="130" VerticalAlignment="Bottom">
@@ -454,7 +454,7 @@
     			<TextBlock TextWrapping="Wrap" Text="Device Class" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="#FFFFFDFD"/>
     		</Border>
     		<Border BorderThickness="1" Background="#FF00B4D6" CornerRadius="0,10,10,10" BorderBrush="#FF00B4D6" Margin="0,57,0,0">
-    			<TextBlock TextWrapping="Wrap" Text="XX:XX:XX:XX:XX:XX" Foreground="#FFFFFDFD" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="29.333"/>
+                <TextBlock Name="deviceClassTxt" TextWrapping="Wrap" Text="XX:XX:XX:XX:XX:XX" Foreground="#FFFFFDFD" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="29.333"/>
     		</Border>
     	</Grid>
     	<Path x:Name="path" Data="M71.5,29.5 C71.5,45.516258 55.606109,58.5 36,58.5 16.393891,58.5 -40,46.016258 -40,30 -40,13.983742 16.393891,0.5 36,0.5 55.606109,0.5 71.5,13.483742 71.5,29.5 z" Fill="#FF175A66" HorizontalAlignment="Left" Margin="242.5,275,0,306" Stretch="Fill" Stroke="#FF175A66" Width="112.5" RenderTransformOrigin="0.5,0.5">

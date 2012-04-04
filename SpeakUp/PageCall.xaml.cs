@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Threading;
 using System.Diagnostics;
 using System.Media;
+using System.IO;
 
 namespace SpeakUp
 {
@@ -22,9 +23,9 @@ namespace SpeakUp
     /// </summary>
     public partial class PageCall : UserControl
     {
-        public SoundPlayer soundClickNum = new SoundPlayer(@"ClickNum.wav");
-        public SoundPlayer soundClickCtrl = new SoundPlayer(@"ClickCtrl.wav");
-        public SoundPlayer soundBeep = new SoundPlayer(@"beep.wav");
+        public SoundPlayer soundClickNum = new SoundPlayer(System.IO.Path.Combine(Constants.appResourcePath,@"Audio\ClickNum.wav"));
+        public SoundPlayer soundClickCtrl = new SoundPlayer(System.IO.Path.Combine(Constants.appResourcePath, @"Audio\ClickCtrl.wav"));
+        public SoundPlayer soundBeep = new SoundPlayer(System.IO.Path.Combine(Constants.appResourcePath, @"Audio\beep.wav"));
         public string number = "";
         public bool mouse_state = false;
 
@@ -417,10 +418,10 @@ namespace SpeakUp
             string[] splInput = rawInput.Split('#');
             string data = splInput[0];
             //data = data.Trim();
-            notifyLabel.Content = data;
+            //notifyLabel.Content = data;
             if (data == Constants.CallIncomming || data == Constants.CallOnGoing || data == Constants.CallOutGoing || data == Constants.CallTerminated || data == Constants.CallSCOrelease)
                 selectedDevice.UpdatePhoneState(rawInput);
-            notifyLabel.Content += "Status:" + selectedDevice.deviceCallState;
+            //notifyLabel.Content += "Status:" + selectedDevice.deviceCallState;
         }
 
         public void InitializeServerThread()

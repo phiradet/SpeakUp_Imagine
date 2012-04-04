@@ -33,6 +33,11 @@ namespace SpeakUp
         int isPageAddDevice;
         PageAddDevice pageAddDevice;
 
+        //++++++++++ BLUETOOH CONNECTION +++++++++++
+        List<BTdevice> deviceList;
+        string errMsg;
+        //++++++++++++++++++++++++++++++++++++++++++
+
         public PageDevice(MainWindow m)
         {
             InitializeComponent();
@@ -44,7 +49,49 @@ namespace SpeakUp
 
         void loadDeviceData()
         {
-            for (int i = 0; i < 10; i++)
+            deviceList = mainWindow.client.GetExistDevice(ref errMsg);
+            if (deviceList == null)
+            {
+                mainWindow.mNotificationLabel.Content = errMsg;
+                return ;
+            }
+            for (int i = 0; i < deviceList.Count; i++)
+            {
+                BTdevice currDevice = deviceList[i];
+                Grid gridTemp = new Grid();
+                gridTemp.ShowGridLines = false;
+                gridTemp.Width = 400;
+                gridTemp.Height = 640;
+                gridTemp.Background = new SolidColorBrush(Colors.White);
+                Button b = new Button();
+                b.Tag = i;
+                b.Template = (ControlTemplate)this.Resources["buttonDevice"];
+                b.Cursor = Cursors.Hand;
+                //ImageSource s = new BitmapImage(new Uri("../../Green-Mobile-Phone.jpg", UriKind.Relative));
+                //b.Background = new ImageBrush(s);
+                //b.Content = i.ToString();
+                b.Click += new RoutedEventHandler(b_Click);
+                b.Width = 300;
+                b.Height = 300;
+                //b.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+                //b.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+                b.Margin = new Thickness(50, 100, 50, 240);
+                gridTemp.Children.Add(b);
+
+                TextBox textBox = new TextBox();
+                textBox.Template = (ControlTemplate)this.Resources["TextBoxDevice"];
+                textBox.Text = currDevice.deviceName;
+                textBox.FontSize = 20;
+                textBox.Foreground = new SolidColorBrush(Colors.White);
+                textBox.TextAlignment = TextAlignment.Left;
+                textBox.Margin = new Thickness(100, 250, 100, 0);
+                textBox.Width = 200;
+                textBox.Height = 60;
+                gridTemp.Children.Add(textBox);
+
+                deviceShowPanel.Children.Add(gridTemp);
+            }
+            /*for (int i = 0; i < 10; i++)
             {
                 Grid gridTemp = new Grid();
                 gridTemp.ShowGridLines = false;
@@ -77,12 +124,16 @@ namespace SpeakUp
                 gridTemp.Children.Add(textBox);
 
                 deviceShowPanel.Children.Add(gridTemp);
-            }
+            }*/
         }
 
 
         void b_Click(object sender, RoutedEventArgs e)
         {
+            //+++++++ BLUETOOTH CONNECTION ++++++++
+            mainWindow.selectedDevice = deviceList[(int)((Button)sender).Tag];
+            //+++++++++++++++++++++++++++++++++++++
+
             //////// Zoom Animation //////////////
             ssViewer.StopFlick();
             Point point = ((Button)sender).TransformToAncestor(ssViewer).Transform(new Point(0, 0));
@@ -218,7 +269,7 @@ namespace SpeakUp
         void myStoryboard_Completed(object sender, EventArgs e)
         {
             Grid g = (Grid)((Grid)gridReal.Children[0]);
-            pageDeviceInfo = new PageDeviceInfo(this);
+            pageDeviceInfo = new PageDeviceInfo(this, mainWindow.selectedDevice);
             pageDeviceInfo.vb.Visual = gridZoom;
             g.Children.Clear();
             g.Children.Add(pageDeviceInfo);

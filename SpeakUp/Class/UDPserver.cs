@@ -44,7 +44,7 @@ namespace SpeakUp
                 Debug.Write(String.Format("Message received from {0}:", sender.ToString()));
                 Debug.WriteLine(tmpData);
                 //parent.commandList.Dispatcher.Invoke(parent.addListDelegate, new Object[] { tmpData });
-                parent.notifyLabel.Dispatcher.Invoke(parent.showNotificationDelegate, new Object[] { tmpData });
+                //parent.notifyLabel.Dispatcher.Invoke(parent.showNotificationDelegate, new Object[] { tmpData });
             }
         }
     }

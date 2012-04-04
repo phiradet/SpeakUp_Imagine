@@ -78,7 +78,7 @@ namespace SpeakUp
                 //currDevice.deviceName = deviceName;
                 //currDevice.deviceAddr = deviceAddr;
                 //currDevice.deviceClass = deviceClass;
-                //allDeviceList.Add(currDevice);
+                allDeviceList.Add(currDevice);
             }
             return allDeviceList;
         }

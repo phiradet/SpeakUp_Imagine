@@ -24,17 +24,36 @@ namespace SpeakUp
         private PageDevice pageDevice;
         private PageCall pageCall;
         private PageChat pageChat;
+        private PageSettings pageSettings;
+
+        #region BT connection
+        //+++++++++++++++++++++++++++++++++++++++++++
+        //++++++++++ BLUETOOTH CONNECTION +++++++++++
+        public BTconnect client;
+        public BTdevice selectedDevice;
+        List<BTdevice> tmp;
+        string errMsg = "";
+        public delegate void showNotificationDelegate(String myString);
+        public showNotificationDelegate showNotificationDelegateObj;
+        public Label mNotificationLabel;
+        //+++++++++++++++++++++++++++++++++++++++++++
+        #endregion
 
         public MainWindow()
         {
             InitializeComponent();
+
+            //++++++ INITIAL BLUETOOTH CONNCTION +++++
+            this.client = new BTconnect();
+            mNotificationLabel = this.notificationLabel;
+            //++++++++++++++++++++++++++++++++++++++++
 
             pageDevice = new PageDevice(this);
             pageDevice.Margin = new Thickness(0,0,0,0);
             showPage_grid.Children.Add(pageDevice);
 
             pageCall = new PageCall();
-            pageCall.Margin = new Thickness(1367, 0, 0, 0);
+            pageCall.Margin = new Thickness(1367 +1, 0, 0, 0);
             showPage_grid.Children.Add(pageCall);
 
             pageChat = new PageChat();
@@ -42,9 +61,14 @@ namespace SpeakUp
             pageChat.Width = 1366;
             showPage_grid.Children.Add(pageChat);
 
+            pageSettings = new PageSettings();
+            pageSettings.Margin = new Thickness(1366 * 3 + 1, 0, 0, 0);
+            pageSettings.Width = 1366;
+            showPage_grid.Children.Add(pageChat);
 
             ssViewer.HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled;
 
+            
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
@@ -168,6 +192,35 @@ namespace SpeakUp
 
             ThicknessAnimation t = new ThicknessAnimation();
             t.To = new Thickness(222, 0, 0, 25.5);
+            t.Duration = TimeSpan.Parse("0:0:0.2");
+            t.EasingFunction = new ExponentialEase()
+            {
+                EasingMode = EasingMode.EaseInOut
+            };
+            Storyboard.SetTargetName(t, "rectCursor");
+            Storyboard.SetTargetProperty(t, new PropertyPath(Rectangle.MarginProperty));
+            myStoryboard.Children.Add(t);
+            myStoryboard.Begin(this);
+
+            ssViewer.HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden;
+        }
+
+        private void buttonSettings_Click(object sender, RoutedEventArgs e)
+        {
+            DoubleAnimation r = new DoubleAnimation();
+            r.To = 1.5;
+            r.Duration = TimeSpan.Parse("0:0:0.2");
+            r.EasingFunction = new ExponentialEase()
+            {
+                EasingMode = EasingMode.EaseInOut
+            };
+            Storyboard.SetTargetName(r, "Mediator");
+            Storyboard.SetTargetProperty(r, new PropertyPath("ScrollableWidthMultiplier"));
+            Storyboard myStoryboard = new Storyboard();
+            myStoryboard.Children.Add(r);
+
+            ThicknessAnimation t = new ThicknessAnimation();
+            t.To = new Thickness(335, 0, 0, 25.5);
             t.Duration = TimeSpan.Parse("0:0:0.2");
             t.EasingFunction = new ExponentialEase()
             {

@@ -21,8 +21,8 @@ namespace SpeakUp
     /// </summary>
     public partial class PageSettings : UserControl
     {
-        public SoundPlayer soundClickCtrl = new SoundPlayer(@"ClickCtrl.wav");
-        public SoundPlayer soundTextChanged = new SoundPlayer(@"ClickNum.wav"); 
+        public SoundPlayer soundClickCtrl = new SoundPlayer(System.IO.Path.Combine(Constants.appResourcePath,@"Audio\ClickCtrl.wav"));
+        public SoundPlayer soundTextChanged = new SoundPlayer(System.IO.Path.Combine(Constants.appResourcePath, @"Audio\ClickNum.wav")); 
         public bool mouse_state = false;
         public bool male_state = false;
         public bool female_state = false;

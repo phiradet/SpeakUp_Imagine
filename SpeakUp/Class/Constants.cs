@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.IO;
 
 namespace SpeakUp
 {
@@ -13,13 +13,20 @@ namespace SpeakUp
         { 
         }
 
-        
+        public const string appResourcePath = @"resource";
+            //Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), @"./resource/"));
         public const int _engLanguage = 0;
         public const int _thaLanguage = 1;
         public const int _chiLanguage = 2;
 
         public const int MALE = 0;
         public const int FEMALE = 1;
+
+        public static string unigramTH_path = Path.Combine(Constants.appResourcePath, @"Data\unigramProb-TH.dat");
+        public static string bigramTH_path = Path.Combine(Constants.appResourcePath, @"Data\bigramProb-TH.dat");
+
+        public static string unigramEN_path = Path.Combine(Constants.appResourcePath, @"Data\unigramProb-EN.dat");
+        public static string bigramEN_path = Path.Combine(Constants.appResourcePath, @"Data\bigramProb-EN.dat");
 
         #region Connect to C program
         //---- CONST for connect to C program

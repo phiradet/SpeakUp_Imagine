@@ -21,11 +21,14 @@ namespace SpeakUp
     public partial class PageDeviceInfo : UserControl
     {
         PageDevice pageDevice;
-        public PageDeviceInfo(PageDevice d)
+        public PageDeviceInfo(PageDevice d,BTdevice selectedDevice)
         {
             InitializeComponent();
             pageDevice = d;
 
+            this.deviceNameTxt.Text = selectedDevice.deviceName;
+            this.macAddrTxt.Text = selectedDevice.deviceAddr;
+            this.deviceClassTxt.Text = selectedDevice.deviceClass;
             /*ThicknessAnimation t = new ThicknessAnimation();
             t.From = new Thickness(-100, 163, 627, 0);
             t.To = new Thickness(180, 163, 627, 0);
