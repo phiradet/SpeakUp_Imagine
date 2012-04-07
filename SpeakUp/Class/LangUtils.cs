@@ -26,6 +26,8 @@ namespace SpeakUp
             string[] s = System.IO.File.ReadAllLines(dataOutPath, Encoding.GetEncoding("TIS-620"));
             foreach (string tmp in s)
                 output += tmp;
+            if (output[output.Length - 1] == '|')
+                output = output.Substring(0, output.Length - 1);
             return output.Trim().Split('|');
         }
 
@@ -81,5 +83,7 @@ namespace SpeakUp
                 input = input.Substring(0,input.Length-1);
             return input.Split(' ');
         }
+
+        
     }
 }

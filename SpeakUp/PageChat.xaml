@@ -6,6 +6,15 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="1366" Background="Red">
     <Grid>
-            
+        <TextBox Height="55" HorizontalAlignment="Left" Margin="33,0,0,20" Name="inputTextBox" VerticalAlignment="Bottom" Width="662" KeyUp="inputTextBox_KeyUp" TextChanged="inputTextBox_TextChanged" />
+        <ListBox Height="410" HorizontalAlignment="Left" Margin="33,54,0,0" Name="historyConvList" VerticalAlignment="Top" Width="826">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+        <Button Content="Speak" Height="55" HorizontalAlignment="Right" Margin="0,565,507,0" Name="speakBtn" VerticalAlignment="Top" Width="158" Click="speakBtn_Click" />
+        <ListBox Height="60" HorizontalAlignment="Left" Margin="33,488,0,0" Name="autoCompleteBox" VerticalAlignment="Top" Width="826" />
     </Grid>
 </UserControl>

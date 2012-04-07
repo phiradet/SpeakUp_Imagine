@@ -12,11 +12,13 @@ namespace SpeakUp
         {
             public Dictionary<string, double> biProb;
         }
-        private static Dictionary<string, double> allWord = new Dictionary<string, double>();
-        private static Dictionary<string, bigramData> allWord_Bigram = new Dictionary<string, bigramData>();
+        private static Dictionary<string, double> allWord;
+        private static Dictionary<string, bigramData> allWord_Bigram;
 
         public static void PrepareTrie(string pathUnigram, string pathBigram, out Trie outTrie)
         {
+            allWord = new Dictionary<string, double>();
+            allWord_Bigram = new Dictionary<string, bigramData>();
             LoadAllWord(pathUnigram);
             LoadAllWord_Bigram(pathBigram);
 

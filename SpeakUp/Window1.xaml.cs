@@ -31,7 +31,8 @@ namespace SpeakUp
             Trie xx;
             predictor.EN_Trie.ContainStringInTrie("love", out x,out xx);
             xx.ContainStringInTrie("children", out x);
-            List<string> tmp = predictor.Predict("I drink be");
+            List<string> tmp;// = predictor.Predict("I drink be");
+            tmp = predictor.Predict("ฉันเดินไปโร");
         }
     }
 }

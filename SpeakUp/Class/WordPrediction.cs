@@ -21,7 +21,7 @@ namespace SpeakUp
         public WordPrediction()
         {
             CreateTrie.PrepareTrie(Constants.unigramEN_path, Constants.bigramEN_path, out EN_Trie);
-            //CreateTrie.PrepareTrie(Constants.unigramTH_path, Constants.bigramTH_path, out TH_Trie);
+            CreateTrie.PrepareTrie(Constants.unigramTH_path, Constants.bigramTH_path, out TH_Trie);
         }
 
         private int CompareProb(string a, string b)
@@ -45,6 +45,39 @@ namespace SpeakUp
             else
             {
                 return DELTA;
+            }
+        }
+
+        private string GetLastElementStr(string[] a)
+        {
+            return a[a.Length - 1];
+        }
+
+        private string ReplaceLastOccurance(string Source, string Find, string Replace)
+        {
+            int Place = Source.LastIndexOf(Find);
+            string result = Source.Remove(Place, Find.Length).Insert(Place, Replace);
+            return result;
+        }
+
+        public string ApplyPredictWord(string newWord, string context)
+        {
+            return "";
+            string outputTxt = "";
+            int language = LangUtils.LanguageDetect(context);
+            if (language == Constants._engLanguage)
+            {
+
+            }
+            else if (language == Constants._thaLanguage)
+            {
+                string[] segText = LangUtils.THWordCut(GetLastElementStr(context.Trim().Split(' ')));
+                string replaceTxt = segText[segText.Length - 1];
+                outputTxt = ReplaceLastOccurance(context, replaceTxt, newWord);
+                return outputTxt;
+            }
+            else
+            {
             }
         }
 
@@ -140,10 +173,20 @@ namespace SpeakUp
                         string wordKey = wordList[i];
                         double probVal = probUnigram[i];
                         double bigramProb;
-                        biGramTrieLst[i].ContainStringInTrie(secondLast, out bigramProb);
-                        if (bigramProb == DUMMY_PROB)
+                        if (biGramTrieLst[i] == null)
                             bigramProb = DELTA;
-                        finalProbTable[wordKey] = (UNIGRAM_W * probVal) + (BIGRAM_W * bigramProb);
+                        else
+                        {
+                            biGramTrieLst[i].ContainStringInTrie(secondLast, out bigramProb);
+                            if (bigramProb == DUMMY_PROB)
+                                bigramProb = DELTA;
+                        }
+                        if (wordKey == null)
+                            Console.Read();
+                        double finalProbVal = (UNIGRAM_W * probVal) + (BIGRAM_W * bigramProb);
+                        if (finalProbVal == double.NaN)
+                            Console.Read();
+                        finalProbTable[wordKey] = finalProbVal;
                     }
                     wordList.Sort(CompareProb);
                     return wordList;
