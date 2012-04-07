@@ -61,10 +61,10 @@ namespace SpeakUp
             pageChat.Width = 1366;
             showPage_grid.Children.Add(pageChat);
 
-            pageSettings = new PageSettings();
-            pageSettings.Margin = new Thickness(1366 * 3 + 1, 0, 0, 0);
-            pageSettings.Width = 1366;
-            showPage_grid.Children.Add(pageChat);
+            //pageSettings = new PageSettings();
+            //pageSettings.Margin = new Thickness(1366 * 3 + 1, 0, 0, 0);
+            //pageSettings.Width = 1366;
+            //showPage_grid.Children.Add(pageChat);
 
             ssViewer.HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled;
 
